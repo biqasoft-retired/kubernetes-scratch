@@ -1,5 +1,6 @@
 This is content of folder /home/kubernetes
 
+For bin used [git-lfs](https://git-lfs.github.com/)
 
 ```bash
 $ cat /run/flannel/subnet.env
