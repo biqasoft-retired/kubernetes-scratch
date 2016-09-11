@@ -1,0 +1,15 @@
+[Unit]
+Description=Flannel
+Documentation=https://github.com/coreos/flannel
+Requires=etcd.service
+After=etcd.service
+
+[Service]
+Type=notify
+ExecStart=/home/kubernetes/network/flanneld --ip-masq
+Restart=on-failure
+LimitNOFILE=65536
+User=root
+
+[Install]
+WantedBy=multi-user.target

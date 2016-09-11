@@ -1,0 +1,8 @@
+[Unit]
+Description=Register kubernetes master in consul
+After=network.target
+After=consul.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/http post http://localhost:8500/v1/agent/service/register ID=kube-master Name=kube-master Port:=8080 Check:='{"HTTP":"http://localhost:8080/healthz", "Interval":"5s", "DeregisterCriticalServiceAfter":"10s"}' --json --ignore-stdin

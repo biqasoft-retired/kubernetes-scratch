@@ -1,0 +1,13 @@
+[Unit]
+Description=Consul
+Requires=env.create.service
+After=env.create.service
+
+[Service]
+Restart=always
+#Type=oneshot
+EnvironmentFile=/home/kubernetes/env/network.env
+ExecStart=/bin/consul agent -server -bootstrap -ui -advertise=${HOST_IP} -bind=0.0.0.0 -client=0.0.0.0 -node=${HOST_IP} -config-file=/home/kubernetes/network/consul/consul_config.json -data-dir=/home/kubernetes/network/consul/data
+
+[Install]
+WantedBy=multi-user.target

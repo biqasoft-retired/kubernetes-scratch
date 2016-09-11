@@ -1,0 +1,5 @@
+master/bin/
+minion/bin/
+common/bin/
+network/flanneld
+network/consul/consul

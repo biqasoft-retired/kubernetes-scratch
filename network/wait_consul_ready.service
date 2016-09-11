@@ -1,0 +1,7 @@
+[Unit]
+Description=Wait until consul is ready to resolve DNS requests
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /home/kubernetes/network/wait_consul_ready.sh

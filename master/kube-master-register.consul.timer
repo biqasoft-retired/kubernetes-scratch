@@ -1,0 +1,9 @@
+[Unit]
+Description=Register kubernetes master every 10sec
+
+[Install]
+WantedBy=timers.target
+
+[Timer]
+OnBootSec=0min
+OnCalendar=*:*:0,10,20,30,40,50

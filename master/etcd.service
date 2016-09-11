@@ -1,0 +1,17 @@
+[Unit]
+Description=etcd key-value store
+Documentation=https://github.com/coreos/etcd
+Requires=wait_consul_ready.service
+After=wait_consul_ready.service
+
+[Service]
+Environment=ETCD_DATA_DIR=/home/kubernetes/master/etcd/data
+Environment=ETCD_NAME=%m
+Type=notify
+ExecStart=/home/kubernetes/master/etcd --discovery-srv biqasoft.com
+Restart=always
+RestartSec=10s
+LimitNOFILE=40000
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,1 @@
+shared between master/minion

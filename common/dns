@@ -1,0 +1,5 @@
+###
+# kubernetes dns (minion) config
+
+# this is kubernetes skydns port
+KUBE_DNS_ARGS="--dns-port=54"
