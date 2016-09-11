@@ -1,3 +1,5 @@
-master/bin filter=lfs diff=lfs merge=lfs -text
-minion/bin filter=lfs diff=lfs merge=lfs -text
-common/bin filter=lfs diff=lfs merge=lfs -text
+master/bin/* filter=lfs diff=lfs merge=lfs -text
+minion/bin/* filter=lfs diff=lfs merge=lfs -text
+common/bin/* filter=lfs diff=lfs merge=lfs -text
+network/consul/consul filter=lfs diff=lfs merge=lfs -text
+network/flanneld filter=lfs diff=lfs merge=lfs -text

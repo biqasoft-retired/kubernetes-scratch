@@ -1,5 +1,5 @@
-master/bin/
-minion/bin/
-common/bin/
-network/flanneld
-network/consul/consul
+#master/bin/
+#minion/bin/
+#common/bin/
+#network/flanneld
+#network/consul/consul
